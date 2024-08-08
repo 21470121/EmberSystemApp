@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      QR Code Scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Scanner</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button expand="full" (click)="startScan()">
+    <ion-icon slot="start" ></ion-icon>
+    Start scanning
+  </ion-button>
+
+  <ion-button expand="full" (click)="stopScan()" class="start-button">
+    <ion-icon slot="start" ></ion-icon>
+    Stop scanning
+  </ion-button>
+
+  <ion-button expand="full" (click)="reset()" *ngIf="scanResult" class="stop-button">
+    <ion-icon slot="start" ></ion-icon>
+    Reset
+  </ion-button>
+
+  <video #video [hidden]="!scanActive" width="100%"></video>
+
+  <canvas #canvas hidden></canvas>
+
+  <ion-card *ngIf="scanResult">
+    <ion-card-header>
+      <ion-card-title>Order Details</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+     Order #{{ scanResult }}
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+
+

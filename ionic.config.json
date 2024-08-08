@@ -1,0 +1,7 @@
+{
+  "name": "EmberSystemApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

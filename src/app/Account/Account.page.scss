@@ -1,0 +1,36 @@
+ion-header {
+    ion-toolbar {
+      ion-title {
+        text-align: center;  // Center the title text
+        color: orangered;  // Apply the 'warn' color
+      }
+    }
+  }
+  
+  ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  // Center align text within ion-content
+    color: orangered;  // Apply the 'warn' color to all text inside ion-content
+    padding: 16px;  // Optional: Add padding for better spacing
+  
+    ion-header {
+      width: 100%;  // Ensure ion-header inside ion-content takes full width
+    }
+  
+    ion-toolbar {
+      ion-title {
+        text-align: center;  // Center align the title text inside collapsed header
+        color: orangered;  // Apply the 'warn' color
+      }
+    }
+  }
+
+  .orangered-button {
+    --background: orangered;
+    --background-activated: orangered;
+    --background-focused: orangered;
+    --ripple-color: orangered;
+    --color: #fff;
+  }
